@@ -1,7 +1,16 @@
-# {{ New Group Name }} Charter
+# S-Mode Memory Protection Unit (SMPU) Task Group Charter
 
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+RISC-V based processors stimulate great interest in the emerging low-end systems like internet of things (IoT). However, as the paged virtual memory system is usually not available on low-end devices, it is hard to isolate the S-mode OSes (e.g., RTOS) and user-mode applications. To support secure processing and isolate faults of U-mode software, it is desirable to enable S-mode OS to limit the physical addresses accessible by U-mode software on a hart.
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+The SMPU Task Group develops the SMPU (S-mode Memory Protection Unit) extension for memory isolation on the low-end systems as an alternative to the paged virtual memory system.
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+The SMPU Task Group will deliver an SMPU architectural specification, which includes the following capabilities:
+
+* Access control of read/write/execute requests by an hart, including address matching, encoding of permissions, etc.
+* Exceptions for access violation
+* Fast switching between different sets of SMPU entries
+* Virtualization support:
+  * Supports for VS/VU modes so a guest VM can use SMPU for memory protection
+  * Supports for hypervisor guest memory protection (as an alternative to hgatp)
+
+Besides the specification (which is in the Stable state now), the SMPU Task Group will work with the Security HC, TEE TG, other committees/SIGs/TGs, and development partners to provide simulators (Spike and Qemu), Sail formal model, test cases, and reference code for commercial OSes (e.g., Linux and RTOS) for SMPU.
