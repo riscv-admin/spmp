@@ -13,4 +13,4 @@ The SMPU Task Group will deliver an SMPU architectural specification, which incl
   * Supports for VS/VU modes so a guest VM can use SMPU for memory protection
   * Supports for hypervisor guest memory protection (as an alternative to hgatp)
 
-Besides the specification (which is in the Stable state now), the SMPU Task Group will work with the Security HC, TEE TG, other committees/SIGs/TGs, and development partners to provide simulators (Spike and Qemu), Sail formal model, test cases, and reference code for commercial OSes (e.g., Linux and RTOS) for SMPU.
+Besides the specification (which is in the Stable state now) and completing all DoD requirements, the SMPU Task Group will work with the Security HC, TEE TG, other committees/SIGs/TGs, and development partners to provide simulators (Spike and Qemu), Sail formal model, test cases, and reference code for commercial OSes (e.g., Linux and RTOS) and open-sourced hypervisors (e.g., KVM and Xvisor) for SMPU.
